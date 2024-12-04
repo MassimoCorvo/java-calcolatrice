@@ -64,4 +64,34 @@ public class CalcoliHelper {
         return numero2;
     }
 
+    //BONUS
+
+    public static float elevamentoAPotenza(int base, int esponente){
+
+        float temp = (float) base;
+        
+        if(base == 0 || esponente == 0)
+            return 1;
+        else if(base == 1 || esponente == 1){
+            return temp;
+        }
+        else {
+            int moduloEsponente = esponente;
+            boolean esponenteNegativo = esponente < 0;
+
+            if(esponenteNegativo)
+                moduloEsponente *= -1;
+
+            
+            for(int i = moduloEsponente; i > 1; i--){
+                temp *= base;
+            }
+
+            if(esponenteNegativo)
+                temp = 1/temp;
+            
+            return temp;
+
+        }
+    }
 }
