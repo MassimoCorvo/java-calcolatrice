@@ -74,6 +74,10 @@ public class CalcoliHelper {
         //Come da indicazioni su Slack
         if(base == 0 && esponente == 0)
             return 1;
+        else if(base == 0)
+            return 0;
+        else if (esponente == 0)
+            return 1;
         else if(base == 1 || esponente == 1){
             return temp;
         }
