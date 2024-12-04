@@ -82,13 +82,9 @@ public class CalcoliHelper {
             return temp;
         }
         else {
-            int moduloEsponente = esponente;
+            int moduloEsponente = valoreAssoulto(esponente);
             boolean esponenteNegativo = esponente < 0;
 
-            if(esponenteNegativo)
-                moduloEsponente *= -1;
-
-            
             for(int i = moduloEsponente; i > 1; i--){
                 temp *=  baseTemp;
             }
