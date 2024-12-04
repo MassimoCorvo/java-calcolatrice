@@ -69,8 +69,10 @@ public class CalcoliHelper {
     public static float elevamentoAPotenza(int base, int esponente){
 
         float temp = (float) base;
+        float baseTemp = (float) base;
         
-        if(base == 0 || esponente == 0)
+        //Come da indicazioni su Slack
+        if(base == 0 && esponente == 0)
             return 1;
         else if(base == 1 || esponente == 1){
             return temp;
@@ -84,7 +86,7 @@ public class CalcoliHelper {
 
             
             for(int i = moduloEsponente; i > 1; i--){
-                temp *= base;
+                temp *=  baseTemp;
             }
 
             if(esponenteNegativo)
